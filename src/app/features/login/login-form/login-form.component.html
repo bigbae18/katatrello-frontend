@@ -1,1 +1,25 @@
-<p>login-form works!</p>
+
+  <mat-card>
+    <mat-card-title>
+        <p class="display-4 h1">Kanban Login</p></mat-card-title>
+    <mat-card-content>
+      <form formGroup="userForm">
+        <p>
+          <mat-form-field>
+          <mat-label>Nombre de usuario</mat-label>
+          <input matInput type="text" placeholder="Nombre de usuario" formControlName="username" required>
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+        </p>
+      </form>
+    </mat-card-content>
+  </mat-card>

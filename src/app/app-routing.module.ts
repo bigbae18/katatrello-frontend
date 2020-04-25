@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./features/kanban/kanban.module').then(m => m.KanbanModule)
+    loadChildren: () => import('./features/kanban/kanban.module').then(m => m.KanbanModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -23,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
