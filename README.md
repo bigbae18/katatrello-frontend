@@ -1,27 +1,22 @@
-# Kanban
+# Proyecto Gestor de Tareas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+Este proyecto ha sido pre-generado con la versión 9.1.2 de [Angular CLI](https://github.com/angular/angular-cli). También tiene su API a la cual tenemos acceso [desde aquí](https://github.com/bigbae18/katatrello-backend).
 
-## Development server
+## ¿Qué es?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+La aplicación consta de un gestor de tareas con el método kanban, hecho por [Adrián](https://github.com/bigbae18).
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para preparar el ambiente de trabajo necesitarás escribir en tu consola estos comandos en el siguiente orden.
+```
+git clone <este-repo>
+npm install
+```
 
-## Build
+## ¿Cómo funciona?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Una vez instaladas las [dependencias](#Setup), puedes escribir `npm start` para abrir un servidor de desarrollo, también puedes usar la compilación [Ahead-Of-Time de Angular](https://angular.io/guide/aot-compiler), para ello debes usar `npm start:aot`. 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+La aplicación abrirá automáticamente una pestaña en tu navegador al enlace `http://localhost:4271` si estás en desarrollo. 
+El enlace será `http://localhost:4270` en caso de haber usado la compilación Ahead-Of-Time.
